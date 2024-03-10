@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useEffect, useState, version } from "react";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -127,7 +128,16 @@ export default function Home() {
   })
   return (
     <>
+    <Head>
+      <title>PingPong</title>
+      <meta name="description" content="This is pingpong game developed using ReactJS for Educational purpose. Used requestAnimationFrame API for amimation for the ball and used window Object for handling edge cases" />
+      <meta name="robots" content="follow, index"></meta>
+      <meta property="og:title" content="React PingPong" />
+      <meta property="og:description" content="This is pingpong game developed using ReactJS for Educational purpose. Used requestAnimationFrame API for amimation for the ball and used window Object for handling edge cases" />
+      <meta property="og:image" content="./pingpong.png" />
+    </Head>
     <Analytics/>
+    <SpeedInsights />
       <div className={styles.box} id="box">
         <div className={styles.score}>
           <div className={styles.scores}>{score}</div>
