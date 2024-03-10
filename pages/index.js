@@ -129,7 +129,7 @@ export default function Home() {
   return (
     <>
     <Head>
-      <title>PingPong</title>
+      <title>PingPong using ReactJS</title>
       <meta name="description" content="This is pingpong game developed using ReactJS for Educational purpose. Used requestAnimationFrame API for amimation for the ball and used window Object for handling edge cases" />
       <meta name="robots" content="follow, index"></meta>
       <meta property="og:title" content="React PingPong" />
