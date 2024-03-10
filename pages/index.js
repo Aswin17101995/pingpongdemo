@@ -25,6 +25,7 @@ export default function Home() {
     let ball_bottom = parseInt(ball.getBoundingClientRect().bottom)
     let slider_top = parseInt(slider_ele.getBoundingClientRect().top)
     let  isRange = false 
+    console.log(parseInt(position.y))
     if(parseInt(position.x) > slider_ele.getBoundingClientRect().left && 
       parseInt(position.x) < slider_ele.getBoundingClientRect().left + 150
     ){
@@ -36,10 +37,10 @@ export default function Home() {
      
     }
 
-    console.log(direction)
 
-    if( isRange && parseInt(position.y) == 540 && direction.y > 0){
-      console.log("dash")
+
+    if( isRange && parseInt(position.y) <= 541   && parseInt(position.y) >= 537 && direction.y > 0){
+      console.log("dash",parseInt(position.y))
       setDirection({
         ...direction,
         y:direction.y* -1
