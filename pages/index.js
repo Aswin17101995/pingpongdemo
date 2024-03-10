@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import { useEffect, useState, version } from "react";
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -126,6 +127,7 @@ export default function Home() {
   })
   return (
     <>
+    <Analytics/>
       <div className={styles.box} id="box">
         <div className={styles.score}>
           <div className={styles.scores}>{score}</div>
