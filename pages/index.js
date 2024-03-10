@@ -40,9 +40,7 @@ export default function Home() {
     if(position.y > 541 && position.y < 543){
      
     }
-
-
-    console.log(top)
+    
     if( isRange && parseInt(position.y) <= top +2   && parseInt(position.y) >= top -3 && direction.y > 0){
       console.log("dash",parseInt(position.y))
       setDirection({
